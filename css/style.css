@@ -583,6 +583,8 @@ Concept section
 }
 
 .concept-item img {
+	width:264px;
+	height: 250px;
 	border-radius: 40px;
 	margin-bottom: 15px;
 }
@@ -808,7 +810,18 @@ Blog page
 .gallery-flex{
 flex:1 1 25%;
 }
+.category-items{
+	display: inline-flex;
+} 
 
+.head-top{
+	width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .btn-purple {
 	background-color: #272151;
 	color: #fff;
@@ -1032,6 +1045,7 @@ Category page
 .category-item {
 	position: relative;
 	margin: 0 17px;
+	height: 36vh;
 	overflow: hidden;
 }
 
@@ -1044,11 +1058,12 @@ Category page
 	border-radius: 40px;
 	top: 50%;
 	z-index: 5;
-	background: rgba(34, 34, 34, 0.671);
+	background: rgba(16, 16, 16, 0.671);
 }
 
 .category-item img {
-	min-width: 100%;
+	width: 100%;
+    height: 100%;
 	border-radius: 40px;
 }
 
@@ -1068,29 +1083,6 @@ Category page
 	color: #fff;
 	margin-bottom: 0;
 	font-size: 12px;
-}
-
-.category-item .ci-link {
-	z-index: 6;
-	position: absolute;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	width: 71px;
-	height: 71px;
-	right: 29px;
-	bottom: 21px;
-	color: #fc0254;
-	font-size: 16px;
-	text-align: center;
-	border-radius: 50%;
-	background: #fff;
 }
 
 .songs-section {
@@ -1558,8 +1550,8 @@ Artest Page
 .back-gallery{
 	color:#fff;
 	position: fixed;
-	top:20vh;
-	right:2vw;
+	bottom: 8vh;
+    right: 3vw;
 	font-size: 20px;
 }
 .back-gallery a{
@@ -1677,7 +1669,7 @@ Responsive
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.about-item img {
 		height: 245px;
-		width: 100%;
+		/* width: 100%; */
 	}
 
 	.playlist-item img {
@@ -1689,9 +1681,9 @@ Responsive
 		padding: 30px 20px 15px 20px;
 	}
 
-	.about-item .line {
+	/* .about-item .line {
 		flex-direction: column;
-	}
+	} */
 
 	.header-section {
 		padding-left: 15px;
@@ -1752,6 +1744,7 @@ Responsive
 
 	.category-item {
 		margin: 0;
+	    height: 41vh;
 	}
 
 	.category-section {
@@ -1841,9 +1834,6 @@ Responsive
 	.about-item img {
 		height: 100%;
 	}
-	.back-gallery{
-		top:25vh;
-	}
 	.tab-screen {
 		display: flex;
 		flex-direction: column;
@@ -1854,9 +1844,9 @@ Responsive
 		height: 250px;
 	}
 
-	.about-item .line {
+	/* .about-item .line {
 		flex-direction: column;
-	}
+	} */
 
 	.hr-img {
 		display: none;
@@ -2000,12 +1990,7 @@ Responsive
 	.category-item {
 		margin: 0;
 	}
-
-	.category-item .ci-link {
-		top: 26px;
-		bottom: auto;
-	}
-
+	
 	.category-item .ci-text {
 		position: absolute;
 		bottom: 10px;
@@ -2024,17 +2009,17 @@ Responsive
 		margin-top: 40px;
 	}
 
-	.about-item {
+	/* .about-item {
 		flex-direction: column;
-	}
+	} */
 
 	.last-footer {
 		margin-bottom: 40px;
 	}
 
-	.about-item img {
+	/* .about-item img {
 		width: 100%;
-	}
+	} */
 }
 
 /* Large Mobile :480px. */
@@ -2042,9 +2027,6 @@ Responsive
 @media only screen and (max-width: 767px) {
 	.about-item {
 		flex-direction: column;
-	}
-	.back-gallery{
-		top:30vh;
 	}
 	.playlist-item img {
 		width: 250px;
@@ -2237,6 +2219,7 @@ Responsive
 
 	.category-item {
 		margin: 0 0 30px;
+		height: 40vh;
 	}
 
 	.map {
@@ -2306,18 +2289,6 @@ Responsive
 	.contact-warp {
 		padding: 100px 15px;
 	}
-
-	.category-item .ci-link {
-		top: 26px;
-		bottom: auto;
-	}
-
-	.category-item .ci-text {
-		position: absolute;
-		bottom: 10px;
-		left: 20px;
-	}
-
 	.single_player_container .jp-interface {
 		display: block;
 	}
